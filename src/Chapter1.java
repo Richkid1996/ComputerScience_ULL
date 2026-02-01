@@ -6,7 +6,7 @@ public class Chapter1 {
         System.out.println("---Running Chapter 1 Practice ---");
 
         Question1(); //  Quiz 1.7 Question 1
-        Question2(); // 
+        Question2(); //
     }
 
     //Quiz 1.7 Question 1:
@@ -18,5 +18,20 @@ public class Chapter1 {
         System.out.println("New coder in Codeville, ready to explore!");
     }
     //Quiz 1.7 Question 2:
+    /* Goal: Learn how to write a simple Java program.
+    Assignment: In the ancient land of Codegypt, a new square pyramid was discovered. Archeologists measured the height
+    and the base side of the pyramid to be 150 and 200 meters long. Your task is to help them compute the volume of the
+    pyramid using the following formulas: Volume = BaseArea * Height / 3
+     */
+    public static void Question2() {
+        int Height = 150;
+        int BaseSide = 200;
+
+        int BaseArea = BaseSide * BaseSide;
+
+        int Volume = (BaseArea * Height) / 3;
+        System.out.println(Volume);
+
+    }
 
 }
