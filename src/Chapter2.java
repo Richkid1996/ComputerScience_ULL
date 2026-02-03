@@ -4,7 +4,8 @@ public class Chapter2 {
     public static void main(String[] args) {
         System.out.println("----Running Chapter 2 Practice----");
 
-        Question1(); // Quiz 2.5 Variables Question1
+        Question1(); // Quiz 2.5 Double Variables Question1
+        Question2(); // Quiz 2.5 Scanner and MyScanner Question2
     }
 
     //Quiz 2.5 Question 1
@@ -16,6 +17,14 @@ public class Chapter2 {
         double milk = 0.75;
         double water = 1.25;
         System.out.printf("Milk cost: " + milk + " Water cost: " + water);
-
     }
+    //Quiz 2.5 Quuestion 2
+    /*Goal: Learn to read and store the user's input values.
+    Assignment: Assume that a Scanner object named myScanner has been created and an int variables named myInteger has
+    been declared. With a Java statement to read a user's input value and store it in myInteger.
+     */
+    public static void Question2() {
+        myInteger = myScanner.nextInt();
+    }
+
 }
