@@ -7,6 +7,7 @@ public class Chapter4 {
        char c2 = 'b';
         Question1(c1,c2 );// Quiz 4.3 Question 1 Using (char) for our variables
         Question2();// Quiz 4.3 Question 2 using Character variable and a static method (.isLowerCase())
+        Question3();// quiz 4.3 Question3 manipulating characters
     }
     /*Goal: Familiarize with the operations of characters.
     Assignment: You are developing your first messaging app. As part of an effort top make communications more secure,
@@ -33,5 +34,16 @@ public class Chapter4 {
         isValid = Character.isLowerCase(character);
         //Prints the final validation result to the console for the user to see
         System.out.println("(Is '" + character + "' a valid lowercase letter? " + isValid);
+    }
+    /*Goal: Learn to write programs manipulating characters.
+    Assignment: You are currently working with the Unicode and ASCII encodings. Unfortunately, receiving numbers is not
+    easily understandable for a human, and you need to quickly know what character is associated with a number and which
+    table encodes it.
+    Create a program that reads an integer from the keyboard. Then, print whether it's an ASCII or Unicode character and
+    which character it is. Your class name should be Answer.
+    Note: For ASCII, consider only the original 8-bit ASCII table, not the extended version.
+     */
+    public static void Question3() {
+
     }
 }
