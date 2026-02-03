@@ -21,6 +21,11 @@ public class Chapter4 {
         System.out.println((char)(c1+c2));
         System.out.println("");//Creates Space between the output
     }
+    /* Goal: Learn to use methods to validate characters.
+    Assignment: As part of the login page of your app, you need to validate that each character of a user's username is valid.
+    Given a char variable character, write a statement that assigns to the already declared boolean variable
+    isValid whether character is a lowercase character.
+     */
     public static void Question2(){
         char character = 'g'; //Try changing this to 'G' or '5'
         boolean isValid;
