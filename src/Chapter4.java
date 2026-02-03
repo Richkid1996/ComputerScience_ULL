@@ -5,7 +5,8 @@ public class Chapter4 {
     public  static void main(String[] args) {
        char c1 = 'a';
        char c2 = 'b';
-        Question1(c1,c2 );// Quiz 4.3 Question 1
+        Question1(c1,c2 );// Quiz 4.3 Question 1 Using (char) for our variables
+        Question2();// Quiz 4.3 Question 2 using Character variable and a static method (.isLowerCase())
     }
     /*Goal: Familiarize with the operations of characters.
     Assignment: You are developing your first messaging app. As part of an effort top make communications more secure,
@@ -18,6 +19,14 @@ public class Chapter4 {
 
         //We sum the values, then cast the total back to a (char)
         System.out.println((char)(c1+c2));
-
+        System.out.println("");//Creates Space between the output
+    }
+    public static void Question2(){
+        char character = 'g'; //Try changing this to 'G' or '5'
+        boolean isValid;
+        //Assigns true to isValid only if the character is a lowercase letter
+        isValid = Character.isLowerCase(character);
+        //Prints the final validation result to the console for the user to see
+        System.out.println("(Is '" + character + "' a valid lowercase letter? " + isValid);
     }
 }
