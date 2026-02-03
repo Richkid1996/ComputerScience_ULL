@@ -17,6 +17,7 @@ public class Chapter2 {
         double milk = 0.75;
         double water = 1.25;
         System.out.printf("Milk cost: " + milk + " Water cost: " + water);
+        System.out.println("");
     }
     //Quiz 2.5 Quuestion 2
     /*Goal: Learn to read and store the user's input values.
@@ -24,7 +25,14 @@ public class Chapter2 {
     been declared. With a Java statement to read a user's input value and store it in myInteger.
      */
     public static void Question2() {
+        java.util.Scanner myScanner = new java.util.Scanner(System.in);// This is how you create the tool (Scanner) do this first
+        //Declare the variable (int)
+        int myInteger;
+        System.out.println("Enter an integer");
+
+        //Where we store the input!
         myInteger = myScanner.nextInt();
+        System.out.println("You entered: " + myInteger);
     }
 
 }
