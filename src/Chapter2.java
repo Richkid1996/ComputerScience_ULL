@@ -1,5 +1,6 @@
-//This Class will be covering Chapter 2 were we will be learning about variables and how they may be changed on the program
+/*This Class will be covering Chapter 2 were we will be learning about variables and how they may be changed on the program*/
 
+import java.util.Scanner;
 public class Chapter2 {
     public static void main(String[] args) {
         System.out.println("----Running Chapter 2 Practice----");
@@ -17,18 +18,18 @@ public class Chapter2 {
         double milk = 0.75;
         double water = 1.25;
         System.out.printf("Milk cost: " + milk + " Water cost: " + water);
-        System.out.println("");
+        System.out.println(""); // Cleans code and adds space between questions Output
     }
-    //Quiz 2.5 Quuestion 2
+    //Quiz 2.5 Question 2
     /*Goal: Learn to read and store the user's input values.
     Assignment: Assume that a Scanner object named myScanner has been created and an int variables named myInteger has
     been declared. With a Java statement to read a user's input value and store it in myInteger.
      */
     public static void Question2() {
-        java.util.Scanner myScanner = new java.util.Scanner(System.in);// This is how you create the tool (Scanner) do this first
+        Scanner myScanner = new  Scanner(System.in);// This is how you create the tool (Scanner) do this first
         //Declare the variable (int)
         int myInteger;
-        System.out.println("Enter an integer");
+        System.out.println("Enter an integer");// This Shows in the terminal
 
         //Where we store the input!
         myInteger = myScanner.nextInt();
