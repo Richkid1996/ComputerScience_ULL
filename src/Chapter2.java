@@ -10,6 +10,7 @@ public class Chapter2 {
         Question1(); // Quiz 2.5 Double Variables Question1
         Question2(); // Quiz 2.5 Scanner and MyScanner Question2
         Question3(); // Quiz 2.6 Assignment Statements and Assignment Expression
+        Question4(); // Quiz 2.6 Assignment Statements and Assignment Expression
     }
 
     //Quiz 2.5 Question 1
@@ -53,5 +54,11 @@ public class Chapter2 {
         System.out.println("The level your in after one mission is: " + levelAfterOneMission);
 
     }
+    //Quiz 2.6 Question 2
+    /*Goal: Learn how to swap and update variables.
+    Assignment: Given two int variables x and y, write a piece of code that assigns the value of x to y and assigns the
+    original value of y decremented by 3 to x. You are free to declare and use an auxiliary variable if needed. */
+    public static void Question4(){
 
+    }
 }
