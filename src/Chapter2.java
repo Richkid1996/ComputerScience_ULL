@@ -9,6 +9,7 @@ public class Chapter2 {
 
         Question1(); // Quiz 2.5 Double Variables Question1
         Question2(); // Quiz 2.5 Scanner and MyScanner Question2
+        Question3(); // Quiz 2.6 Assignment Statements and Assignment Expression
     }
 
     //Quiz 2.5 Question 1
@@ -20,7 +21,7 @@ public class Chapter2 {
         double milk = 0.75;
         double water = 1.25;
         System.out.printf("Milk cost: " + milk + " Water cost: " + water);
-        System.out.println(""); // Cleans code and adds space between questions Output
+        System.out.println(); // Cleans code and adds space between questions Output
     }
     //Quiz 2.5 Question 2
     /*Goal: Learn to read and store the user's input values.
@@ -36,6 +37,21 @@ public class Chapter2 {
         //Where we store the input!
         myInteger = myScanner.nextInt();
         System.out.println("You entered: " + myInteger);
+        System.out.println("");
+    }
+    //Quiz 2.6 Question 1
+    /*Goal: Learn how to use simple assignment statements.
+    Assignment: In a video game development project, you are coding the leveling system where a character starts at a certain
+    level and gains a set number of levels after completing a mission.
+    Given two int variables startLevel and levelAfterOneMission, write a statement that assigns levelAfterOneMission a value
+    that is 5 levels higher than the startLevel.
+     */
+    public static void Question3(){
+        int startLevel = 0;
+        double levelAfterOneMission = 0.0;
+        levelAfterOneMission = startLevel + 5;
+        System.out.println("The level your in after one mission is: " + levelAfterOneMission);
+
     }
 
 }
