@@ -7,6 +7,7 @@ public class Chapter3 {
         Question1(); // Quiz 3.2 Using the Boolean variable
         Question2();// Quiz 3.2 Learning to compare values
         Question3();//Quiz 3.2 Learn to compare Values
+        Question4();// Quiz 3.2 Learn to compare values
     }
     //Quiz 3.2 Question1
     /*Goal: Declare a boolean variable and assign its value.
@@ -41,8 +42,10 @@ public class Chapter3 {
 
         // Optional: Print the result so you can see if it worked!
         System.out.println("The Humidity Level is:" + result);
+        System.out.println("");
 
     }
+    //Quiz 3.2 Question4
     /*Goal: Learn to compare values.
     Assignment: To calculate whether an employee has earned overtime pay, the company software needs to compare the
     employee's work hours for the week compared to their contracted hours.
@@ -50,13 +53,32 @@ public class Chapter3 {
     it to the variable result. Assume that all variables have already been declared*/
 
     //Solution Breakdown:
-
+    //Creating the first two variables that contain the standard work hours and the hours worked that week by the individual.
+    //Create the boolean variable were we test the two variables to see if it's true
+    //Create a output to show the boolean variables results.
     public static void Question3() {
-        int accuedWeekHours = 65;
-        int contractHours = 40;
-        boolean result = accuedWeekHours > contractHours;
+        int accruedWeekHours = 65;// Set the variable with the amount of hours worked this week
+        int contractHours = 40;//Set the standard variable that contains the contract Hours
+        boolean result = accruedWeekHours > contractHours;
         System.out.println("Is this weeks hours greater than your contracted:? " + result);
+        System.out.println("");
 
+    }
+    //Quiz 3.2 Question5
+    /*Goal: Learn to compare values.
+    Assignment: Given three parameters int a, int b, and int c, write an expression that evaluates to true if the three
+    numbers can represent a valid percentage together (i.e., their sum is less than or equal to 100), and assign it to
+    the variable result that is already declared.
+    */
+    //Solution Breakdown:
+    //Create the three variables
+    //Create the boolean variable that contains the math to test if they're less than 100
+    //Create the output to represent if it's true or not.
+    public static  void Question4() {
+        int a = 15; int b = 25; int c= 25;;
+        boolean result2 = (a + b + c) <=100;
+        System.out.println("Are the values (a)(b)(c) less than 100? " + result2);
+        System.out.println("");
     }
 
 }
