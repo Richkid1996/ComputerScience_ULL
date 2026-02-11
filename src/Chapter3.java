@@ -133,7 +133,24 @@ public class Chapter3 {
 
     }
     //Quiz 3.4 Question1
+    /*Goal: Learn to write if-else statements.
+    Assignment: In an educational software tracking student progress, there's a feature to digitally transmit the result
+     of an exam to the students.
+    Given a double variable testScore, print on the screen the message Congratulations, you pass! if testScore is greater
+    or equal to 60.0, or You did not pass otherwise.
+     */
+    //Solution:
+
     public static void Question7() {
+        Scanner test = new Scanner(System.in);
+        System.out.println("What is your test Score? ");
+        int testScore = test.nextInt();
+        if (testScore >= 60.0) {
+            System.out.println("Congratulations, you pass!");
+        }
+        else {
+            System.out.println("You did not pass");
+        }
 
     }
     //Quiz 3.13 Question 1
