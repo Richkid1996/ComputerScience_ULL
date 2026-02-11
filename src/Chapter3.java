@@ -11,7 +11,9 @@ public class Chapter3 {
         Question5();// Quiz 3.3 (Question 1)Learn to write If statements
         Question6();// Quiz 3.3 (Question 2)Learn to write If statements
         Question7();//Quiz 3.4 Learn to write if else statements
-        Question8();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
+        Question8();//Quiz 3.4 Learn to write if else statements
+        Question9();//Quiz 3.5 Learn to write multi-way if statements
+        Question15();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
     }
     //Quiz 3.2 Question1
     /*Goal: Declare a boolean variable and assign its value.
@@ -140,6 +142,10 @@ public class Chapter3 {
     or equal to 60.0, or You did not pass otherwise.
      */
     //Solution:
+    //1.Created Scanner named test to record test Scores from the users
+    //2.Wrote a print statement to ask the user what their test score is.
+    //3. stored the test scores in the int variable testScores
+    //4. Created an if statement testing if the Score is passing or not passing
 
     public static void Question7() {
         Scanner test = new Scanner(System.in);
@@ -147,12 +153,66 @@ public class Chapter3 {
         int testScore = test.nextInt();
         if (testScore >= 60.0) {
             System.out.println("Congratulations, you pass!");
+            System.out.println("");
         }
         else {
             System.out.println("You did not pass");
+            System.out.println("");
+        }
+    }
+    //Quiz3.4 Question2
+    /*Goal: Learn to write if-else statements.
+    Assignment: The public train system offers a discount on ticket price when the travel happens outside of peak hours.
+     Given a variable double ticketPrice that has been declared and initialized to 0 and a boolean isPeakHours, assign
+     the value 6.35 to ticketPrice if isPeakHours is false, and 9.50 otherwise.
+     */
+    //Solution:
+    public static void Question8(){
+        double ticketprice = 0.00;
+        Scanner hours = new Scanner(System.in);
+        System.out.println("Is it Peak hours for the train right now? ");
+        boolean isPeakHours = hours.nextBoolean();
+        if (isPeakHours == false) {
+            ticketprice = 6.35;
+            System.out.println("The price of tickets at this hour is: " + ticketprice);
+            System.out.println("");
+        }
+        else {
+            ticketprice = 9.50;
+            System.out.println("The price of tickets at this hour is: " + ticketprice);
+            System.out.println("");
+        }
+    }
+    //Quiz 3.5 Question1
+    /*Goal: Learn to write multi-way if statements.
+    Assignment: Given a variable double grade, already declared and initialized: print on screen the following message:
+    "Your grade is: A" if the grade is 90 or greater
+    "Your grade is: B" if the grade is 80 or greater, but under 90
+    "Your grade is: C" if the grade is 70 or greater, but under 80
+    "Your grade is: D" if the grade is 60 or greater, but under 70
+    "Your grade is: F" if the grade is lower than 60
+     */
+    //Solutions:
+
+    public static void Question9() {
+        Scanner testGrade = new Scanner(System.in);
+        System.out.println("What is your grade for this test ");
+        int grade = testGrade.nextInt();
+        if (grade >= 90) {
+            System.out.println("Your grade is: A");
+        } else if (grade >= 80) {
+            System.out.println("Your Grade is: B");
+        } else if (grade >= 70) {
+            System.out.println("Your Grade is: C");
+        } else if (grade >= 60) {
+            System.out.println("Your Grade is: D");
+        } else if (grade < 60) {
+            System.out.println("Your Grade is: F");
         }
 
     }
+
+
     //Quiz 3.13 Question 1
     /* Goal: Understand how to use switch statements to handle multiple conditions.
     Assignment: Write a full program with class name Calculator to solve a calculator problem that prompts the user for
@@ -160,7 +220,7 @@ public class Chapter3 {
     */
     //Solution:
 
-    public static void Question8() {
+    public static void Question15() {
 
     }
 
