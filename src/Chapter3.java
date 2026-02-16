@@ -13,6 +13,9 @@ public class Chapter3 {
         Question7();//Quiz 3.4 Learn to write if else statements
         Question8();//Quiz 3.4 Learn to write if else statements
         Question9();//Quiz 3.5 Learn to write multi-way if statements
+        Question10();//Quiz 3.5 Understand how to use multi-way if statement
+        Question11();//Quiz 3.10 Learn to use boolean Operators Question 1
+        Question12();//Quiz 3.10 Learn to use boolean Operators Question 2
         Question15();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
     }
     //Quiz 3.2 Question1
@@ -209,6 +212,59 @@ public class Chapter3 {
         } else if (grade < 60) {
             System.out.println("Your Grade is: F");
         }
+    }
+    // Quiz 3.5 Question2
+    /*Goal: Understand how to use multi-way if statements.
+
+Assignment: Develop a program to determine whether a student is eligible for an academic scholarship. The scholarship
+committee has set multiple criteria that must be met, including academic performance, extracurricular involvement, and community service hours.
+Eligibility Criteria:
+The student must have a GPA of 3.8 or higher.
+The student must be involved in at least two extracurricular activities.
+The student must have completed at least 50 hours of community service.
+Given the variables double gpa, int extracurriculars, and int serviceHours, already declared and assigned, as well as
+the variable int scholarshipLevel that has just been declared.
+If the GPA requirement is not met, assign 0 to scholarshipLevel
+If the GPA requirement is met, but the extracurriculars requirement is not met, assign 1 to scholarshipLevel
+If the GPA and the extracurriculars requirement are met, but the community service requirement is not met, assign 2 to scholarshipLevel
+If the GPA, extracurriculars, and community service requirement are all met, assign 3 to scholarshipLevel
+     */
+    public static void Question10(){
+        int scolarshipLevel = 0;
+
+        //Input to get the users GPA from school
+        double gpa = 3.8;
+        int extracurriculars = 5;
+        int serviceHours = 78;
+
+
+        if (gpa < 3.8){
+            scolarshipLevel = 0;
+        } else if (extracurriculars < 2) {
+            scolarshipLevel = 1;
+        } else if (serviceHours < 50) {
+            scolarshipLevel = 2;
+        }else {
+            scolarshipLevel = 3;
+        }
+        System.out.println("Your Scolarship Level is: " + scolarshipLevel);
+        System.out.println("");
+
+    }
+    //Quiz 3.10 Question1
+    /*Goal: Learn to use boolean operators.
+    Assignment: A simple light switch works by changing states between on and off. Assume a boolean variable called isLightOn
+    already exists and has been declared. Write a piece of code that reassigns isLightOn to its opposite value.
+     */
+    public static void Question11(){
+        boolean isLightOn = true;
+        //Changes the boolean variable for the lights to opposite of what it was set too
+        isLightOn = !isLightOn;
+        System.out.println("Are the Lights on? " + isLightOn);
+        System.out.println("");
+    }
+    //Quiz 3.10 Question2
+    public static void Question12() {
 
     }
 
