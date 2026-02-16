@@ -16,6 +16,8 @@ public class Chapter3 {
         Question10();//Quiz 3.5 Understand how to use multi-way if statement
         Question11();//Quiz 3.10 Learn to use boolean Operators Question 1
         Question12();//Quiz 3.10 Learn to use boolean Operators Question 2
+        Question13();//Quiz 3.10 Learn to use boolean Operators Question 3
+        Question14();//Quiz 3.10 Learn to use boolean Operators Question 4
         Question15();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
     }
     //Quiz 3.2 Question1
@@ -264,7 +266,45 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         System.out.println("");
     }
     //Quiz 3.10 Question2
+    /*Goal: Learn to use boolean operators.
+    Assignment: In a system monitoring water quality, sensors measure pH level and turbidity to ensure safety.
+    Given int variables pHLevel and turbidity, write an expression that evaluates to true if pHLevel is no more than 1
+    unit away from 7 and turbidity is lower than 3. Assign the result of this expression to the variable isSafe that has already been declared.
+     */
     public static void Question12() {
+        int pHLevel = 2;
+        int turbidity = 5;
+        boolean isSafe = true;
+        //This test the given PHLevel of the water minus 7 and seeing if its less than 1 and if the turbidity less than 3
+        /*We alos use Math.abs for the absolute value of this equation so we can go in both directions negative and postive
+        and not get an error in the code */
+        isSafe = (Math.abs(pHLevel -7) <= 1) && (turbidity < 3);
+        System.out.println("Is the variable isSafe True or False: ?" + isSafe);
+        System.out.println("");
+    }
+    //Quiz 3.10 Question3
+    /*Goal: Learn to use boolean operators.
+    Assignment: At an amusement park, tickets are sold at a discounted rate to visitors who are younger than 16, older than 65, or who have a premium membership.
+    Given the variables int age and boolean hasMembership, write an expression that evaluates to true if the condition
+    for a discount applies, false otherwise, and assigns that value to the Boolean variable discount, which has already been declared.
+     */
+    public static void Question13(){
+        int age = 0;
+        boolean hasMembership = true;
+        boolean discount = ;
+
+        discount = (age < 16) || (age >= 65) || (hasMembership = true);
+        System.out.println("Does the given person receive a discount:  " + discount);
+        System.out.println("");
+    }
+    //Quiz 3.10 Question4
+    /*Goal: Learn to use boolean operators.
+    Assignment: A smart thermostat indicates whether the user is heating their apartment in an environmentally friendly way.
+    This condition is true if either the heat pump or the radiator is turned on, but not both.
+    Write an expression that evaluates to true if exactly one of the boolean variables heatPump and radiator is true.
+    Assign the expression to the variable environmentallyFriendly, which is already declared.
+     */
+    public static void Question14(){
 
     }
 
