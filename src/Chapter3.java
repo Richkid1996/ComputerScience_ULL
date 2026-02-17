@@ -18,7 +18,11 @@ public class Chapter3 {
         Question12();//Quiz 3.10 Learn to use boolean Operators Question 2
         Question13();//Quiz 3.10 Learn to use boolean Operators Question 3
         Question14();//Quiz 3.10 Learn to use boolean Operators Question 4
-        Question15();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
+        Question15();//Quiz 3.10 Learn how to use the conditional operator ? : for making decisions within expressions, based on a variable's value
+        Question16();//Quiz 3.10 Learn how to use nested ternary operators
+        Question17();//Quiz 3.10 Learn to write ternary if statements
+        Question18();//Chapter 3 Programing Assignment 1
+        Question20();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
     }
     //Quiz 3.2 Question1
     /*Goal: Declare a boolean variable and assign its value.
@@ -235,9 +239,15 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         int scolarshipLevel = 0;
 
         //Input to get the users GPA from school
-        double gpa = 3.8;
-        int extracurriculars = 5;
-        int serviceHours = 78;
+        Scanner gpaInput = new Scanner(System.in);
+        System.out.println("What is your GPA: ");
+        double gpa = gpaInput.nextInt();
+
+        System.out.println("How many extra curricular activities  did you participate in: ");
+        int extracurriculars = gpaInput.nextInt();
+
+        System.out.println("How many Service hours did you work?: ");
+        int serviceHours = gpaInput.nextInt();
 
 
         if (gpa < 3.8){
@@ -267,13 +277,18 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     }
     //Quiz 3.10 Question2
     /*Goal: Learn to use boolean operators.
+
     Assignment: In a system monitoring water quality, sensors measure pH level and turbidity to ensure safety.
     Given int variables pHLevel and turbidity, write an expression that evaluates to true if pHLevel is no more than 1
     unit away from 7 and turbidity is lower than 3. Assign the result of this expression to the variable isSafe that has already been declared.
      */
     public static void Question12() {
-        int pHLevel = 2;
-        int turbidity = 5;
+        Scanner waterInput = new Scanner(System.in);
+        System.out.println("What is the PH level: ");
+        int pHLevel = waterInput.nextInt();
+
+        System.out.println("What level iis the Turbidity: ");
+        int turbidity = waterInput.nextInt();
         boolean isSafe = true;
         //This test the given PHLevel of the water minus 7 and seeing if its less than 1 and if the turbidity less than 3
         /*We alos use Math.abs for the absolute value of this equation so we can go in both directions negative and postive
@@ -284,6 +299,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     }
     //Quiz 3.10 Question3
     /*Goal: Learn to use boolean operators.
+
     Assignment: At an amusement park, tickets are sold at a discounted rate to visitors who are younger than 16, older than 65, or who have a premium membership.
     Given the variables int age and boolean hasMembership, write an expression that evaluates to true if the condition
     for a discount applies, false otherwise, and assigns that value to the Boolean variable discount, which has already been declared.
@@ -291,7 +307,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     public static void Question13(){
         int age = 0;
         boolean hasMembership = true;
-        boolean discount = ;
+        boolean discount = false;
 
         discount = (age < 16) || (age >= 65) || (hasMembership = true);
         System.out.println("Does the given person receive a discount:  " + discount);
@@ -299,24 +315,134 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     }
     //Quiz 3.10 Question4
     /*Goal: Learn to use boolean operators.
+
     Assignment: A smart thermostat indicates whether the user is heating their apartment in an environmentally friendly way.
     This condition is true if either the heat pump or the radiator is turned on, but not both.
     Write an expression that evaluates to true if exactly one of the boolean variables heatPump and radiator is true.
     Assign the expression to the variable environmentallyFriendly, which is already declared.
      */
     public static void Question14(){
+        boolean heatPump = true;
+        boolean radiator = false;
+        boolean environmentallyFriendly = true;
+
+        environmentallyFriendly = (heatPump || radiator) && !(heatPump && radiator);
+
+        System.out.println("Is my heating unit enviormentally friendly: ?" + environmentallyFriendly);
+        System.out.println("");
+
+    }
+    //Quiz 3.14 Question1
+    /*Goal: Learn how to use the conditional operator ? : for making decisions within expressions, based on a variable's value.
+
+    Assignment: Write an expression using the conditional operator ? : that evaluates the variable age and prints the
+    message "You are eligible to vote." if age is greater or equal to 18 or prints "You are not eligible to vote." otherwise.
+    Assume int variable age is already declared and initialized.
+     */
+    public static void Question15(){
+        int age = 21;
+    //Your code follows the perfect ternary blueprint: Condition ? Result_If_True : Result_If_False;
+        System.out.println(age>=18 ? "You are eligible to vote " : "You are not eligible to vote");
+
+    }
+    //Quiz 3.14 Question2
+    /*Goal: Learn how to use nested ternary operators to simplify conditional statements.
+
+    Assignment: Write a statement that evaluates the int variable age and prints the following, using the ternary operator:
+    "Child": 0-12 years
+    "Teen": 13-19 years
+    "Adult": 20-64 years
+    "Senior": 65 years and above
+    Assume int variable age is already declared and initialized.
+     */
+    public static void Question16(){
+        Scanner personsAge = new Scanner(System.in);
+        System.out.println("What is your age? ");
+        int age = personsAge.nextInt();
+        //Your code follows the perfect ternary blueprint: Condition ? Result_If_True : Result_If_False;
+        System.out.println(age < 13 ? "Child": age < 20? "Teen": age <65? "Adult": "Senior");
+        System.out.println("");
+    }
+    //Quiz 3.14 Question3
+    /* Goal: Learn to write ternary if statements.
+
+    Assignment: In a new loyalty program for a café, customers are classified into tiers based on the number of coffee
+    cups they've purchased. Each tier rewards customers with different benefits.
+
+    Write an expression that evaluates the int variable coffeeCups, and prints one of the following, using the ternary operator:
+
+    "None"
+    "Bronze"
+    "Silver"
+    "Gold"
+    "Platinum"
+    The following values of coffeeCups define the categories:
+    None: if the number of coffees is less than 10.
+    Bronze tier is awarded between 10 cups and 19.
+    Silver tier is awarded between 20 cups and 29,
+    Gold tier is awarded between 30 and 39,
+    Platinum tier is awarded over 39 cups.
+    Assume int variable coffeeCups is already declared and initialized.
+     */
+    public static void Question17() {
+        int coffeCups = 0;
+        System.out.println(coffeCups < 10? "None":
+                          (coffeCups < 19? "Bronze":
+                                  (coffeCups <30? "Silver":
+                                          (coffeCups <40? "Gold": "Platnium"))));
+
+
+    }
+    // Chapter 3 Programming Assignment 1
+    /*Write a program that prompts the user to enter the month and year and displays the number of days in the month.
+    For example, if the user entered month 2 and year 2012, the program should display:
+
+    February 2012 has 29 days
+    If the user entered month 3 and year 2015, the program should display:
+
+   March 2015 has 31 days
+    Sample Run 1
+
+    Enter a month in the year (e.g., 1 for Jan): 2
+    Enter a year: 2012
+    February 2012 has 29 days
+    Sample Run 2
+
+    Enter a month in the year (e.g., 1 for Jan): 4
+    Enter a year: 2005
+    April 2005 has 30 days
+    Sample Run 3
+
+    Enter a month in the year (e.g., 1 for Jan): 2
+    Enter a year: 2006
+    February 2006 has 28 days
+    Sample Run 4
+
+    Enter a month in the year (e.g., 1 for Jan): 2
+    Enter a year: 2000
+    February 2000 has 29 days
+
+     */
+    public static void Question18(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the month (1-12): ");
+        int month = input.nextInt();
+
+        System.out.println("Enter the year: ");
+        int year = input.nextInt();
 
     }
 
 
     //Quiz 3.13 Question 1
     /* Goal: Understand how to use switch statements to handle multiple conditions.
+
     Assignment: Write a full program with class name Calculator to solve a calculator problem that prompts the user for
     2 (double) numbers and an operator (char) and outputs the result.
     */
     //Solution:
 
-    public static void Question15() {
+    public static void Question20() {
 
     }
 
