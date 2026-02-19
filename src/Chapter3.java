@@ -1,6 +1,8 @@
 /*In Chapter 3 we are covering Boolean Data Types, Values, and Expressions and if else statements.
  */
+//This is where we import the Scanner so we can use it throughout the class
 import java.util.Scanner;
+//Where we introduce the given class
 public class Chapter3 {
     public static void main(String[] args) {
         System.out.println("---Running Chapter 3 Practice----");
@@ -22,6 +24,7 @@ public class Chapter3 {
         Question16();//Quiz 3.10 Learn how to use nested ternary operators
         Question17();//Quiz 3.10 Learn to write ternary if statements
         Question18();//Chapter 3 Programing Assignment 1
+        Question19();//Chapter 3 Programing Assignment 2
         Question20();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
     }
     //Quiz 3.2 Question1
@@ -241,7 +244,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         //Input to get the users GPA from school
         Scanner gpaInput = new Scanner(System.in);
         System.out.println("What is your GPA: ");
-        double gpa = gpaInput.nextInt();
+        double gpa = gpaInput.nextDouble();
 
         System.out.println("How many extra curricular activities  did you participate in: ");
         int extracurriculars = gpaInput.nextInt();
@@ -423,13 +426,98 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     February 2000 has 29 days
 
      */
-    public static void Question18(){
+    public static void Question18() {
+        //Created a new Input Scanner to receive info from the user
         Scanner input = new Scanner(System.in);
+        //Input for the Month variable
         System.out.println("Enter the month (1-12): ");
         int month = input.nextInt();
-
+        //Input for the Year variable
         System.out.println("Enter the year: ");
         int year = input.nextInt();
+
+        //We create the int variable for the number of days in each month
+        int days = 0;
+
+        //We create a String Variable to store the actual month name
+        String monthName = "";
+
+        switch (month) {
+            case 1: {
+                monthName = "January"; days = 31;
+                break;
+            }
+            case 2: {
+                monthName = "February";
+                if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                    days = 29;
+                } else {
+                    days = 28;
+                    break;
+                }
+            }
+            case 3: {
+                monthName = "March";
+                days = 31;
+                break;
+            }
+            case 4: {
+                monthName = "April";
+                days = 30;
+                break;
+            }
+            case 5: {
+                monthName = "May";
+                days = 31;
+                break;
+            }
+            case 6: {
+                monthName = "June";
+                days = 30;
+                break;
+            }
+            case 7: {
+                monthName = "July";
+                days = 31;
+                break;
+            }
+            case 8: {
+                monthName = "August";
+                days = 31;
+                break;
+            }
+            case 9: {
+                monthName = "September";
+                days = 30;
+                break;
+            }
+            case 10: {
+                monthName = "October";
+                days = 31;
+                break;
+            }
+            case 11: {
+                monthName = "November";
+                days = 30;
+                break;
+            }
+            case 12: {
+                monthName = "December";
+                days = 31;
+                break;
+            }
+            default: {
+                System.out.println("Invalid month. Please enter a number between 1 and 12.");
+                System.exit(1);
+            }
+        }
+        System.out.println(monthName + " " + year + " has " + days + " days");
+    }
+    //Chapter 3 Programming Assianment 2
+    /*
+
+     */
+    public static void Question19(){
 
     }
 
@@ -439,12 +527,62 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
 
     Assignment: Write a full program with class name Calculator to solve a calculator problem that prompts the user for
     2 (double) numbers and an operator (char) and outputs the result.
+    Sample run:
+
+    Enter the first number: 10
+    Enter the second number: 5
+    Choose the operation (+, -, *, /): *
+    The result is: 50
+
+    Enter the first number: 10
+    Enter the second number: 0
+    Choose the operation (+, -, *, /): /
+    Cannot divide by zero.
+
+    Enter the first number: 10
+    Enter the second number: 0
+    Choose the operation (+, -, *, /): ^
+    Invalid operation selected.
     */
     //Solution:
 
     public static void Question20() {
+        Scanner Calinput = new Scanner(System.in);
+        //Getting input for the first number
+        System.out.println("Enter the first number: ");
+        double num1 = Calinput.nextDouble();
 
+        //Getting input for the first number
+        System.out.println("Enter the second number: ");
+        double num2 = Calinput.nextDouble();
+
+        //Getting the Character input
+        System.out.println("Choose the operation (+, -, *, /): ");
+        char operator = Calinput.next().charAt(0);
+
+        switch (operator) {
+            case '+': {
+                System.out.println("The result is :" + (num1 + num2));
+            }
+            case '-': {
+                System.out.println("The result is :" + (num1 - num2));
+            }
+            case '*': {
+                System.out.println("The result is :" + (num1 * num2));
+            }
+            case '/': {
+                if (num2 != 0) {
+                    System.out.println("The result is :" + (num1 / num2));
+                } else {
+                    System.out.println("Cannot divide by zero.");
+                }
+
+            }
+            default:
+                System.out.println("Invalid operation selected.");
+        }
     }
 
 
-}
+
+    }
