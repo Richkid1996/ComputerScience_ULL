@@ -1,9 +1,13 @@
+import java.util.Scanner;
 public class Chapter5 {
     public static  void main(String[] args) {
         System.out.println("---Running Chapter 5 Practice---");
         Question1();//Quiz 5.7 Learn to write for loops Question 1
         Question2();//Quiz 5.7 Learn to write for loops Question 2
         Question3();//Quiz 5.7 Learn to write for loops Question 3
+        Question4();//Quiz 5.7 Learn to write for loops Question 4
+        Question5();//Quiz 5.7 Learnto write for loops Question 5
+        Question6();//Quiz 5.
     }
     //Quiz 5.7 Question1
     /*Goal: Learn to write for loops.
@@ -41,6 +45,7 @@ public class Chapter5 {
     u5 = 11
      */
     public static void Question2(){
+        int n = 5;
         int u0 = 2;
         int u1 = 1;
         int un = 0;
@@ -69,7 +74,54 @@ public class Chapter5 {
     Hint: use the modulo operator %.
      */
     public static void Question3(){
+       int n = 100;
+        for (int i = 1; i <= n; i ++) {
+            //Rule 1: Must be a multiple of 3 (i % 3 == 0)
+            //Rule 2: Must be end in 1 (i % 10 == 1)
+            if (i % 3 == 0 && i % 10 == 1) {
+                System.out.print(i + " ");
+            }
+        }
 
     }
+    //Quiz 5.7 Question4
+    /*Goal: Learn to write for loops.
+
+    Assignment: Write a for loop that prints all the integers from 300 down to 150 inclusive that are multiples of 3, each
+    separated by exactly one space. There should be no space before the first number and after the last number in the output.
+     */
+    public static void Question4(){
+        boolean first = true; //This is the flag to handle the space logic
+        for (int i = 300; i >= 150; i--){
+            if (i % 3 == 0){
+                if(!first){
+                    System.out.print("");// This adds a space Only
+                }
+                System.out.print(i);
+                first = false;
+            }
+        }
+    }
+
+    public static void Question5(){
+        Scanner stdin = new Scanner(System.in);
+        System.out.println("What is the first number?: ");
+        int number1 = stdin.nextInt();
+
+        System.out.println("What is the second number");
+        int number2 = stdin.nextInt();
+        int gcd = 1;
+
+// Use the same names (number1, number2) inside the loop
+        for (int i = 1; i <= number1 && i <= number2; i++) {
+            if (number1 % i == 0 && number2 % i == 0){
+                gcd = i;
+            }
+        }
+        System.out.println(gcd);
+    }
+
+
+
 }
 
