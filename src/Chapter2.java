@@ -11,6 +11,7 @@ public class Chapter2 {
         Question2(); // Quiz 2.5 Scanner and MyScanner Question2
         Question3(); // Quiz 2.6 Assignment Statements and Assignment Expression
         Question4(); // Quiz 2.6 Assignment Statements and Assignment Expression
+        Question5(); // Quiz 2.9 Learn to declare and initialize variables
     }
 
     //Quiz 2.5 Question 1
@@ -59,6 +60,10 @@ public class Chapter2 {
     Assignment: Given two int variables x and y, write a piece of code that assigns the value of x to y and assigns the
     original value of y decremented by 3 to x. You are free to declare and use an auxiliary variable if needed. */
     public static void Question4(){
+
+    }
+
+    public static void Question5(){
 
     }
 }
