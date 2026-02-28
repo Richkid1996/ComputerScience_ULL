@@ -62,7 +62,11 @@ public class Chapter2 {
     public static void Question4(){
 
     }
-
+    // Goal: Learn to declare and initialize variables.
+    /*Assignment: Declare a double constant NEPER_NUMBER that stores the following approximation of the Neper number
+ .  Then, assuming that a Scanner object myScanner that can read input from the user is available, write a single statement
+    to declare a long variable longValue and use it to store the next value provided by the user.
+     */
     public static void Question5(){
 
     }
