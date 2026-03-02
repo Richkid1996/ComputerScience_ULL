@@ -16,6 +16,14 @@ public class Chapter2 {
         Question7(); // Quiz 2.9 Learn to declare and initialize variables
         Question8(); //Quiz 2.9.2 Learn how to write simple arithmetic expressions.
         Question9(); //Quiz 2.9.2 Learn how to write simple arithmetic expressions.
+        Question10();//Quiz 2.9.2 Learn to write simple arithmetic expressions.
+        Question11();//Quiz 2.9.2 Learn to write simple arithmetic expressions.
+        Question12();//Quiz 2.10 Learn to write literals.
+        Question13();//Quiz 2.10 Learn how to write literals.
+        Question14();//Quiz 2.10  Learn how to use scientific notation
+        Question15();//Quiz 2.12 Learn to write arithmetic expressions leveraging operator precedence.
+
+
     }
 
     //Quiz 2.5 Question 1
@@ -123,7 +131,7 @@ public class Chapter2 {
         System.out.println("Whats the output of ratio: " + ratio);
         System.out.println("");
     }
-    //Quiz 2.9.2 Question9
+    //Quiz 2.9.2 Question2
     /*Goal: Learn how to write simple arithmetic expressions.
     Assignment: Assume that:
     an int variable totalCookies represents the total number of cookies produced in a day;
@@ -138,6 +146,72 @@ public class Chapter2 {
         int cookiesPerBox = 6;
         int leftovers = totalCookies % cookiesPerBox;
         System.out.println("How many leftover cookies do we have: " + leftovers);
+    }
+    //Quiz 2.9.2 Question3
+    /*Goal: Learn to write simple arithmetic expressions.
+    Assignment: In developing an interstellar navigation app, you need to convert distances expressed in kilometers to
+    parsecs, which is a common unit of length for astronomical distances. Assume a double constant FACTOR was declared
+    that represents the conversion factor from kilometers to parsecs, i.e., 1 parsec is FACTOR kilometers. This means
+    that to convert kilometers to parsecs, we divide the distances in kilometers by FACTOR. Given a double variable
+    distanceKilometers, write a statement that declares a double variable distanceParsecs and assigns to it the distance expressed in parsecs.
+     */
+    public static void Question10() {
+        double parsecs = 1;
+        double kilometers = 0;
+        final double FACTOR = parsecs = kilometers;
+
+        double distanceParsecs = kilometers / FACTOR;
+    }
+    //Quiz 2.9.2 Question4
+    /*Goal: Learn how to write simple arithmetic expressions.
+    Assignment: As the manager of a music concert venue, you're organizing a big event and need to make sure everyone
+    has a good view and experience. You, therefore, decided to divide the venue into sections, each holding an equal
+    number of attendees. As the concert venue is far from the city, a bus service is supplied to carry people to the concert. Assume that:
+    the int variable numOfBuses represents the total number of buses that will be used;
+    the int variable busCapacity represents the number of people each bus will carry;
+    the int constant SECTION_CAPACITY represents the maximum number of attendees that can be assigned to a section.
+    Write a single statement that declares an int variable extraPeople and assigns to it the number of people that will
+    end up assigned to a section that potentially will not be full, depending on if the total number of attendees is divisible by the section capacity.
+     */
+    public static void Question11() {
+        int numOfBuses = 5;
+        int busCapacity = 36;
+        final int SECTION_CAPACITY = 25;
+
+        int extraPeople = (numOfBuses * busCapacity)  % SECTION_CAPACITY;
+    }
+    //Quiz 2.10 Question1
+    /*Goal: Learn to write literals.
+    Assignment: As you know, in Java, an int variable can store positive values up to
+    Write a statement that declares a variable
+    and assigns to it the value 2147483648 using the appropriate data type.
+     */
+    public static void Question12() {
+        long n = 2147483648L;
+    }
+
+    //Quiz 2.10 Question2
+    /*Assignment: Write a statement that declares a float constant C that contains the value of the speed of light in a vacuum. Assume
+    C = 299,792,458.0
+    m/s (meters per second).
+     */
+    public static void Question13() {
+        final float C = 299792458.0F;
+    }
+    //Quiz 2.10 Question3
+    /*Assignment: The Avogadro Number, indicated by the symbol NA  is a fundamental constant in physics and its value is 6.02214076x1o^23
+    (reciprocal moles). Write a statement that declares a double constant NA whose value is the value of the Avogadro
+    Number. Use scientific notation in your assignment expression.
+     */
+    public static void Question14(){
+        final double NA = 6.02214076e23;
+    }
+    //Quiz 2.12 Question1
+    /*
+
+     */
+    public static void Question15(){
+
     }
 
 
