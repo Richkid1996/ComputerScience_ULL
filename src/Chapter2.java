@@ -11,7 +11,8 @@ public class Chapter2 {
         Question2(); // Quiz 2.5 Scanner and MyScanner Question2
         Question3(); // Quiz 2.6 Assignment Statements and Assignment Expression
         Question4(); // Quiz 2.6 Assignment Statements and Assignment Expression
-        Question5(); // Quiz 2.9 Learn to declare and initialize variables
+        Question5(); // Quiz 2.7 Learn how to declare and initialize constants.
+        Question6(); // Quiz 2.9 Learn to declare and initialize variables
     }
 
     //Quiz 2.5 Question 1
@@ -59,15 +60,40 @@ public class Chapter2 {
     /*Goal: Learn how to swap and update variables.
     Assignment: Given two int variables x and y, write a piece of code that assigns the value of x to y and assigns the
     original value of y decremented by 3 to x. You are free to declare and use an auxiliary variable if needed. */
-    public static void Question4(){
+    public static void Question4() {
+        // Assign the values of x and y
+        int x  = 5;
+        int y = 10;
 
+        //Assign the original value of y to a new variable
+        int tempY = y;
+
+        //Assign the value of x to y
+        y = x;
+
+        x = tempY - 3;
+
+        System.out.println("The value of Y: " + tempY);
+        System.out.println("");
+    }
+    //Quiz 2.7 Question1
+    /*Goal: Learn how to declare and initialize constants.
+    Assignment: In a software system monitoring a spaceship, it's crucial to have a constant that represents a minimum
+    threshold of fuel so that the crew is informed when the ship is running out of fuel.
+    Declare a double constant, FUEL_THRESHOLD, whose value is 90.0.
+     */
+    public static void Question5(){
+       final double FUEL_THRESHOLD = 90.0;
+       System.out.println("What is the fuel value: " + FUEL_THRESHOLD);
+       System.out.println("");
     }
     // Goal: Learn to declare and initialize variables.
-    /*Assignment: Declare a double constant NEPER_NUMBER that stores the following approximation of the Neper number
+    /*Assignment: Declare a double constant NEPER_NUMBER that stores the following approximation of the Neper number 2.17
  .  Then, assuming that a Scanner object myScanner that can read input from the user is available, write a single statement
     to declare a long variable longValue and use it to store the next value provided by the user.
      */
-    public static void Question5(){
+    public static void Question6(){
+       final double NEPER_NUMBER =
 
     }
 }
