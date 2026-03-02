@@ -12,7 +12,10 @@ public class Chapter2 {
         Question3(); // Quiz 2.6 Assignment Statements and Assignment Expression
         Question4(); // Quiz 2.6 Assignment Statements and Assignment Expression
         Question5(); // Quiz 2.7 Learn how to declare and initialize constants.
-        Question6(); // Quiz 2.9 Learn to declare and initialize variables
+        Question6(); //Quiz 2.7 Learn how to use constants and chained assignment expressions.
+        Question7(); // Quiz 2.9 Learn to declare and initialize variables
+        Question8(); //Quiz 2.9.2 Learn how to write simple arithmetic expressions.
+        Question9(); //Quiz 2.9.2 Learn how to write simple arithmetic expressions.
     }
 
     //Quiz 2.5 Question 1
@@ -87,13 +90,55 @@ public class Chapter2 {
        System.out.println("What is the fuel value: " + FUEL_THRESHOLD);
        System.out.println("");
     }
+    //Quiz 2.7 Question2
+    /*Assignment: While developing your video game, you need to decide the initial level of stamina when players are
+    spawned in the game. First, declare an int constant INITIAL_STAMINA, whose value is 100. Then, write a single
+    statement to declare the int variables player1Stamina and player2Stamina and assign the value of INITIAL_STAMINA to both.
+     */
+    public static void Question6(){
+        final int INITIAL_STAMINA = 100;
+        int player1Stamina = INITIAL_STAMINA, player2Stamina = INITIAL_STAMINA;
+    }
     // Goal: Learn to declare and initialize variables.
-    /*Assignment: Declare a double constant NEPER_NUMBER that stores the following approximation of the Neper number 2.17
+    /*Assignment: Declare a double constant NEPER_NUMBER that stores the following approximation of the Neper number 2.71828
  .  Then, assuming that a Scanner object myScanner that can read input from the user is available, write a single statement
     to declare a long variable longValue and use it to store the next value provided by the user.
      */
-    public static void Question6(){
-       final double NEPER_NUMBER =
-
+    public static void Question7(){
+       final double NEPER_NUMBER = 2.71828;
+       Scanner myScanner2 = new Scanner(System.in);
+       System.out.println("Please give me a number value: ");
+       long longValue = myScanner2.nextLong();
+       System.out.println("The value given is:" + longValue);
+       System.out.println("");
     }
+    //Quiz 2.9.2 Question1
+    /*Goal: Learn how to write simple arithmetic expressions.
+    Assignment: A peer programming student wrote the following statement to compute the ratio between 10 and 4 and assign it to the double variable ratio:
+    double ratio = 10 / 4;
+    However, this needs to be corrected as ratio results to hold the value 2.0 instead of 2.5. Can you help the student write the correct statement?
+     */
+    public static void Question8() {
+        double ratio  = 10.0 / 4;
+        System.out.println("Whats the output of ratio: " + ratio);
+        System.out.println("");
+    }
+    //Quiz 2.9.2 Question9
+    /*Goal: Learn how to write simple arithmetic expressions.
+    Assignment: Assume that:
+    an int variable totalCookies represents the total number of cookies produced in a day;
+    an int variable cookiesPerBox represents the number of cookies you can store in a box.
+    Write a line of code that declares an int variable leftovers and assigns it to the number of leftover cookies after
+    dividing all the cookies into full boxes.
+     */
+    public static void Question9(){
+        Scanner cookies = new Scanner(System.in);
+        System.out.println("How many cookies have we sold today: ");
+        int totalCookies = cookies.nextInt();
+        int cookiesPerBox = 6;
+        int leftovers = totalCookies % cookiesPerBox;
+        System.out.println("How many leftover cookies do we have: " + leftovers);
+    }
+
+
 }

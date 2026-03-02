@@ -8,7 +8,7 @@ public class Chapter6 {
         Question5();//Quiz 6.3 Learn to call methods Question 2
         Question6();//Quiz 6.3 Learn to call methods Question 3
         Question7();//Quiz 6.3 Learn to call methods Question 4
-        Question8();//Quiz 6.4 Learn to write static void-returning methods
+        //Question8();//Quiz 6.4 Learn to write static void-returning methods
     }
     //Quiz 6.2 Question 1
     /*Goal: Learn to write static methods.

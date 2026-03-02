@@ -7,7 +7,7 @@ public class Chapter5 {
         Question3();//Quiz 5.7 Learn to write for loops Question 3
         Question4();//Quiz 5.7 Learn to write for loops Question 4
         Question5();//Quiz 5.7 Learnto write for loops Question 5
-        Question6();//Quiz 5.
+        //Question6();//Quiz 5.
     }
     //Quiz 5.7 Question1
     /*Goal: Learn to write for loops.
