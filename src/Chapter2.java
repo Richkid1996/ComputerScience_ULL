@@ -21,8 +21,9 @@ public class Chapter2 {
         Question12();//Quiz 2.10 Learn to write literals.
         Question13();//Quiz 2.10 Learn how to write literals.
         Question14();//Quiz 2.10  Learn how to use scientific notation
-        Question15();//Quiz 2.12 Learn to write arithmetic expressions leveraging operator precedence.
-
+        Question15();//Quiz 2.14 Learn to use augmented assignment operators.
+        Question16();//Quiz 2.14 Learn how to use augmented assignment operators.
+        Question17();//Quiz 2.15 Learn how to use increment and decrement operators.
 
     }
 
@@ -206,13 +207,39 @@ public class Chapter2 {
     public static void Question14(){
         final double NA = 6.02214076e23;
     }
-    //Quiz 2.12 Question1
-    /*
-
+    //Quiz 2.14 Question1
+    /*Goal: Learn to use augmented assignment operators.
+    Assignment: In managing a book club, the number of members is set to increase as a result of a successful recruitment event.
+    Given an int variable bookClubMembers, write a statement that increases the value of that variable by 5. New members
+    also mean more budget, write a second statement that triples the given double variable budget.
      */
-    public static void Question15(){
-
+    public static void Question15() {
+        int bookClubMember = 20;
+        double budget = 250.0;
+        bookClubMember += 5;
+        budget *= 3;
+        System.out.println("How many members did we add? " + bookClubMember +" How much did the budget increase? " + budget);
     }
+    //Quiz 2.14 Question2
+    /*Goal: Learn how to use augmented assignment operators.
+    Assignment: Assuming all the following int variables have been declared and initialized, rewrite all the following
+    statements and, if possible, use augmented assignment operators:
+    x = x % (n * m - 14);
+    y = (n + m - 14) / x;
+    x = x * x;
+     */
+    public static void Question16(){
+        int x = 20, y= 30, m= 45, n= 55;
+
+        x %= (n * m -14);
+        y = (n + m - 14) / x;
+        x *= x;
+        System.out.println(x + y );
+    }
+    //Quiz 2.15 Question1
+
+
+
 
 
 }
