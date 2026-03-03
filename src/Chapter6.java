@@ -1,5 +1,5 @@
 public class Chapter6 {
-    public static public static void main(String[] args) {
+    public static void main(String[] args) {
         System.out.println("----Running Chapter 7 Practice------");
         Question1();//Quiz 6.2 Learn to write static methods
         Question2();//Quiz 6.2 Learn to write static methods
@@ -52,7 +52,7 @@ public class Chapter6 {
     Save the result to a variable called result, which has already been declared.
      */
     public static void Question4() {
-        result = isCriminal("Jack the Ripper ")
+        result = isCriminal("Jack the Ripper ");
 
     }
     //Quiz 6.3 Question 2

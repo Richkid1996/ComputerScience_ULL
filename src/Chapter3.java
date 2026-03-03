@@ -696,4 +696,5 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
                                     (coffeeCups <30 ? "Silver":
                                             (coffeeCups <40 ? "Gold": "Platinum"))));
     }
+
 }
