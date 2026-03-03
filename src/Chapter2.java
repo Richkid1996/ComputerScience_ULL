@@ -21,10 +21,10 @@ public class Chapter2 {
         Question12();//Quiz 2.10 Learn to write literals.
         Question13();//Quiz 2.10 Learn how to write literals.
         Question14();//Quiz 2.10  Learn how to use scientific notation
-        Question15();//Quiz 2.14 Learn to use augmented assignment operators.
-        Question16();//Quiz 2.14 Learn how to use augmented assignment operators.
-        Question17();//Quiz 2.15 Learn how to use increment and decrement operators.
-
+        Question15();//Quiz 2.14 Learn to use augmented assignment operators.Question1
+        Question16();//Quiz 2.14 Learn how to use augmented assignment operators.Question2
+        Question17();//Quiz 2.15 Learn how to use increment and decrement operators.Question1
+        Question18();//Quiz 2.15 Learn how to use increment and decrement operators.Question2
     }
 
     //Quiz 2.5 Question 1
@@ -237,9 +237,25 @@ public class Chapter2 {
         System.out.println(x + y );
     }
     //Quiz 2.15 Question1
-
-
-
-
-
+    /*Goal: Learn how to use increment and decrement operators.
+    Assignment: Assuming all the variables involved have been declared and initialized, write a single statement,
+    using increment/decrement operators, that assigns to x the current value of y divided by 5 and then decrements y by one in the same statement.
+     */
+    public static void Question17(){
+        int x = 15;
+        int y = 23;
+        x = y -- /5;
+        System.out.println(x);
+    }
+    //Quiz 2.15 Question2
+    /*Goal: Learn how to use increment and decrement operators.
+    Assignment: Assuming all the variables involved have been declared and initialized, write a single statement, using
+    increment/decrement operators, that assigns to x the value of x divided by the current value of y incremented by one.
+    The statement should, at the same time, also increment y by one. Write the statement in the shortest possible way.
+     */
+    public static void Question18(){
+        int x = 45, y = 89;
+        x /= ++y;
+        System.out.println(x);
+    }
 }
