@@ -1,5 +1,6 @@
 //Chapter 4:Mathmatical Functions, Characters, and strings
 //Quiz 4.3.4:Comparing and Testing Characters
+import java.util.Locale;
 import java.util.Scanner;
 public class Chapter4 {
     public  static void main(String[] args) {
@@ -9,6 +10,9 @@ public class Chapter4 {
         Question2();// Quiz 4.3 Learn to use methods to validate characters.
         Question3();// Quiz 4.3 Learn to write programs manipulating characters.
         Question4();//Quiz 4.4 Learn to assign string literals.
+        Question5();//Quiz 4.4 Learn to trim a string.
+        Question6();//Quiz 4.4.2 Learn to access characters in a string.
+        Question7();//Quiz 4.4.3 Learn to concatenate strings.
     }
     //Quiz 4.3 Question1
     /*Goal: Familiarize with the operations of characters.
@@ -64,6 +68,53 @@ public class Chapter4 {
     declares the String variable key and assigns it the concatenation of the lower-case versions of title and author.
      */
     public static void Question4(){
+        String title = "Moby Dick";
+        String author = "Lewis Hamilton";
+        String key = title.toLowerCase() + author.toLowerCase();
+        System.out.println(key);
+    }
+    //Quiz 4.4 Question2
+    /*Goal: Learn to trim a string.
+
+    Assignment: As part of the backend team of a streaming service, you are developing a new encoding to make audio
+    streaming easier. The audio signals are converted to strings, the first character of which is a checksum for the signal.
+    Several white spaces are added to the string at the end to have a consistent number of characters each string carries.
+    Assume a String variable signal has already been declared and initialized. Write a code snippet that reads the first
+    non-whitespace character of signal. Assign this character to the char variable firstChar, already declared.
+    If signal is empty or contains only white space, firstChar will be assigned \0.
+     */
+    public static void Question5(){
+            String signal = "     ";
+            String trimmedSignal = signal.trim();
+            char firstChar;
+            if (trimmedSignal.isEmpty()) {
+                firstChar = '\0';
+            } else {
+                firstChar = trimmedSignal.charAt(0);
+        }
+    }
+    //Quiz 4.4.2 question1
+    /*Goal: Learn to access characters in a string.
+
+    Assignment: In a system for cataloging digital books, each book has a unique identifier code.
+    The last digit of this code determines the genre of the book.
+    Given a String variable bookCode and a char variable lastChar, write a code snippet that assigns to lastChar the last
+    character of the bookCode. If the value of bookCode were "XJ39E", the expression's value would be 'E'.
+     */
+    public static void Question6(){
+            String bookCode = "XJ39E";
+            char lastChar;
+            lastChar = bookCode.charAt(bookCode.length()-1);
+            System.out.println(lastChar);
+    }
+    //Quiz 4.4.3 Question1
+    /*Goal: Learn to concatenate strings.
+    Assignment: You need to send some data to a remote server that reads a stream of characters. The server works as follows:
+    it first reads the length of the string that it should parse, followed by a space, and finally, the actual string.
+    Given the string message, write a code snippet that follows the above format and assigns its value to the previously
+    declared String variable formattedMessage. For example, if message were "Hello World!", formattedMessage should be "12 Hello World!".
+     */
+    public static void Question7(){
 
     }
 }
