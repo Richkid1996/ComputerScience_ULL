@@ -26,7 +26,12 @@ public class Chapter3 {
         Question18();//Chapter 3 Programing Assignment 1
         Question19();//Chapter 3 Programing Assignment 2
         Question20();// Quiz 3.13 Understand how to use switch statements to handle multiple conditions.
+        Question21();// Quiz 3.13 Learn to write switch-case statements.
+        Question22();//Quiz 3.14 Learn how to use the conditional operator ? : for making decisions within expressions, based on a variable's value.
+        Question23();//Quiz 3.14 Learn how to use nested ternary operators to simplify conditional statements.
+        Question24();//Quiz 3.14 Learn to write ternary if statements.
     }
+
     //Quiz 3.2 Question1
     /*Goal: Declare a boolean variable and assign its value.
     Assignment: In a racing game, the boost of the player's vehicle is controlled by a variable called boost. Declare
@@ -39,6 +44,7 @@ public class Chapter3 {
     public static void Question1() {
         boolean boost = false;
     }
+
     //Quiz 3.2 Questions2
     /*Goal: Learn to compare values.
     Assignment: In a smart home system, the humidity level is constantly monitored to adjust the dehumidifier's settings for optimal comfort.
@@ -83,6 +89,7 @@ public class Chapter3 {
         System.out.println("");
 
     }
+
     //Quiz 3.2 Question5
     /*Goal: Learn to compare values.
     Assignment: Given three parameters int a, int b, and int c, write an expression that evaluates to true if the three
@@ -93,12 +100,16 @@ public class Chapter3 {
     //Create the three variables
     //Create the boolean variable that contains the math to test if they're less than 100
     //Create the output to represent if it's true or not.
-    public static  void Question4() {
-        int a = 15; int b = 25; int c= 25;;
-        boolean result2 = (a + b + c) <=100;
+    public static void Question4() {
+        int a = 15;
+        int b = 25;
+        int c = 25;
+        ;
+        boolean result2 = (a + b + c) <= 100;
         System.out.println("Are the values (a)(b)(c) less than 100? " + result2);
         System.out.println("");
     }
+
     //Quiz 3.3 Question1
     /*Goal: Learn to write if statements.
     Assignment: In a mobile gaming app, a message is displayed if the player beats the current high score. Given the
@@ -110,8 +121,8 @@ public class Chapter3 {
     //2.Create the Scanner that is called input were we get the players Score from the user
     //3.Then we create a output statement asking the user what's there score
     //4. Then we create a if statement testing whither if the players score is greater than the highScore
-    public static void Question5(){
-       int highScore = 865;// Original HighScore value
+    public static void Question5() {
+        int highScore = 865;// Original HighScore value
 
         Scanner input = new Scanner(System.in);
         System.out.println("What is your score? ");
@@ -121,6 +132,7 @@ public class Chapter3 {
             System.out.println("We have a New HighScore!!!");
         }
     }
+
     //Quiz 3.3 Question2
     /*Goal: Learn to write if statements.
     Assignment: In a logistics management system for a food delivery service, the delivery fee is adjusted based on how
@@ -138,7 +150,8 @@ public class Chapter3 {
         Scanner delivery = new Scanner(System.in);
         System.out.println("How many Deliveries do we have today? ");
         int numberOfDeliveries = delivery.nextInt();
-         int deliveryDiscount = 20;;
+        int deliveryDiscount = 20;
+        ;
         if (numberOfDeliveries > 50) {
             deliveryDiscount = 15;
             System.out.println("What is the delivery discount? " + deliveryDiscount);
@@ -166,12 +179,12 @@ public class Chapter3 {
         if (testScore >= 60.0) {
             System.out.println("Congratulations, you pass!");
             System.out.println("");
-        }
-        else {
+        } else {
             System.out.println("You did not pass");
             System.out.println("");
         }
     }
+
     //Quiz3.4 Question2
     /*Goal: Learn to write if-else statements.
     Assignment: The public train system offers a discount on ticket price when the travel happens outside of peak hours.
@@ -179,7 +192,7 @@ public class Chapter3 {
      the value 6.35 to ticketPrice if isPeakHours is false, and 9.50 otherwise.
      */
     //Solution:
-    public static void Question8(){
+    public static void Question8() {
         double ticketprice = 0.00;
         Scanner hours = new Scanner(System.in);
         System.out.println("Is it Peak hours for the train right now? ");
@@ -188,8 +201,7 @@ public class Chapter3 {
             ticketprice = 6.35;
             System.out.println("The price of tickets at this hour is: " + ticketprice);
             System.out.println("");
-        }
-        else {
+        } else {
             ticketprice = 9.50;
             System.out.println("The price of tickets at this hour is: " + ticketprice);
             System.out.println("");
@@ -222,6 +234,7 @@ public class Chapter3 {
             System.out.println("Your Grade is: F");
         }
     }
+
     // Quiz 3.5 Question2
     /*Goal: Understand how to use multi-way if statements.
 
@@ -238,7 +251,7 @@ If the GPA requirement is met, but the extracurriculars requirement is not met, 
 If the GPA and the extracurriculars requirement are met, but the community service requirement is not met, assign 2 to scholarshipLevel
 If the GPA, extracurriculars, and community service requirement are all met, assign 3 to scholarshipLevel
      */
-    public static void Question10(){
+    public static void Question10() {
         int scolarshipLevel = 0;
 
         //Input to get the users GPA from school
@@ -253,31 +266,33 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         int serviceHours = gpaInput.nextInt();
 
 
-        if (gpa < 3.8){
+        if (gpa < 3.8) {
             scolarshipLevel = 0;
         } else if (extracurriculars < 2) {
             scolarshipLevel = 1;
         } else if (serviceHours < 50) {
             scolarshipLevel = 2;
-        }else {
+        } else {
             scolarshipLevel = 3;
         }
         System.out.println("Your Scolarship Level is: " + scolarshipLevel);
         System.out.println("");
 
     }
+
     //Quiz 3.10 Question1
     /*Goal: Learn to use boolean operators.
     Assignment: A simple light switch works by changing states between on and off. Assume a boolean variable called isLightOn
     already exists and has been declared. Write a piece of code that reassigns isLightOn to its opposite value.
      */
-    public static void Question11(){
+    public static void Question11() {
         boolean isLightOn = true;
         //Changes the boolean variable for the lights to opposite of what it was set too
         isLightOn = !isLightOn;
         System.out.println("Are the Lights on? " + isLightOn);
         System.out.println("");
     }
+
     //Quiz 3.10 Question2
     /*Goal: Learn to use boolean operators.
 
@@ -296,10 +311,11 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         //This test the given PHLevel of the water minus 7 and seeing if its less than 1 and if the turbidity less than 3
         /*We alos use Math.abs for the absolute value of this equation so we can go in both directions negative and postive
         and not get an error in the code */
-        isSafe = (Math.abs(pHLevel -7) <= 1) && (turbidity < 3);
+        isSafe = (Math.abs(pHLevel - 7) <= 1) && (turbidity < 3);
         System.out.println("Is the variable isSafe True or False: ?" + isSafe);
         System.out.println("");
     }
+
     //Quiz 3.10 Question3
     /*Goal: Learn to use boolean operators.
 
@@ -307,7 +323,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     Given the variables int age and boolean hasMembership, write an expression that evaluates to true if the condition
     for a discount applies, false otherwise, and assigns that value to the Boolean variable discount, which has already been declared.
      */
-    public static void Question13(){
+    public static void Question13() {
         int age = 0;
         boolean hasMembership = true;
         boolean discount = false;
@@ -316,6 +332,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         System.out.println("Does the given person receive a discount:  " + discount);
         System.out.println("");
     }
+
     //Quiz 3.10 Question4
     /*Goal: Learn to use boolean operators.
 
@@ -324,7 +341,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     Write an expression that evaluates to true if exactly one of the boolean variables heatPump and radiator is true.
     Assign the expression to the variable environmentallyFriendly, which is already declared.
      */
-    public static void Question14(){
+    public static void Question14() {
         boolean heatPump = true;
         boolean radiator = false;
         boolean environmentallyFriendly = true;
@@ -335,6 +352,7 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         System.out.println("");
 
     }
+
     //Quiz 3.14 Question1
     /*Goal: Learn how to use the conditional operator ? : for making decisions within expressions, based on a variable's value.
 
@@ -342,12 +360,13 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     message "You are eligible to vote." if age is greater or equal to 18 or prints "You are not eligible to vote." otherwise.
     Assume int variable age is already declared and initialized.
      */
-    public static void Question15(){
+    public static void Question15() {
         int age = 21;
-    //Your code follows the perfect ternary blueprint: Condition ? Result_If_True : Result_If_False;
-        System.out.println(age>=18 ? "You are eligible to vote " : "You are not eligible to vote");
+        //Your code follows the perfect ternary blueprint: Condition ? Result_If_True : Result_If_False;
+        System.out.println(age >= 18 ? "You are eligible to vote " : "You are not eligible to vote");
 
     }
+
     //Quiz 3.14 Question2
     /*Goal: Learn how to use nested ternary operators to simplify conditional statements.
 
@@ -358,14 +377,15 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
     "Senior": 65 years and above
     Assume int variable age is already declared and initialized.
      */
-    public static void Question16(){
+    public static void Question16() {
         Scanner personsAge = new Scanner(System.in);
         System.out.println("What is your age? ");
         int age = personsAge.nextInt();
         //Your code follows the perfect ternary blueprint: Condition ? Result_If_True : Result_If_False;
-        System.out.println(age < 13 ? "Child": age < 20? "Teen": age <65? "Adult": "Senior");
+        System.out.println(age < 13 ? "Child" : age < 20 ? "Teen" : age < 65 ? "Adult" : "Senior");
         System.out.println("");
     }
+
     //Quiz 3.14 Question3
     /* Goal: Learn to write ternary if statements.
 
@@ -389,13 +409,14 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
      */
     public static void Question17() {
         int coffeCups = 0;
-        System.out.println(coffeCups < 10? "None":
-                          (coffeCups < 19? "Bronze":
-                                  (coffeCups <30? "Silver":
-                                          (coffeCups <40? "Gold": "Platnium"))));
+        System.out.println(coffeCups < 10 ? "None" :
+                (coffeCups < 19 ? "Bronze" :
+                        (coffeCups < 30 ? "Silver" :
+                                (coffeCups < 40 ? "Gold" : "Platnium"))));
 
 
     }
+
     // Chapter 3 Programming Assignment 1
     /*Write a program that prompts the user to enter the month and year and displays the number of days in the month.
     For example, if the user entered month 2 and year 2012, the program should display:
@@ -444,7 +465,8 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
 
         switch (month) {
             case 1: {
-                monthName = "January"; days = 31;
+                monthName = "January";
+                days = 31;
                 break;
             }
             case 2: {
@@ -513,11 +535,12 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         }
         System.out.println(monthName + " " + year + " has " + days + " days");
     }
+
     //Chapter 3 Programming Assianment 2
     /*
 
      */
-    public static void Question19(){
+    public static void Question19() {
 
     }
 
@@ -583,6 +606,94 @@ If the GPA, extracurriculars, and community service requirement are all met, ass
         }
     }
 
+    //Quiz 3.13 Question2
+    /*Goal: Learn to write switch-case statements.
+    Assignment: In a new eco-friendly transportation system, vehicles are categorized by their emission levels to encourage
+    lower emissions. The categories are as follows:
+    0: Electric
+    1: Hybrid
+    2-4: Gasoline Low Emission
+    5: Gasoline
+    6-9: Diesel
+    Given an int variable vehicleType, write a switch statement that prints out the emission category based on vehicleType.
+    For example, if vehicleType is 2, print "Gasoline Low Emission".
+     */
+    public static void Question21() {
+        Scanner carType = new Scanner(System.in);
+        System.out.println("What is the vehicles Emissions?  ");
 
+        int vehicleType = carType.nextInt();
 
+        switch (vehicleType) {
+            case 0 -> System.out.println("Electric");
+            case 1 -> System.out.println("Hybrid");
+            case 2, 3, 4 -> System.out.println("Gasoline Low Emission");
+            case 5 -> System.out.println("Gasoline");
+            case 6, 7, 8, 9 -> System.out.println("Diesel");
+            default -> System.out.println("Invalid Vehicle Type Try again");
+        }
     }
+
+    //Quiz 3.14 Question1
+    /*Goal: Learn how to use the conditional operator ? : for making decisions within expressions, based on a variable's value.
+
+    Assignment: Write an expression using the conditional operator ? : that evaluates the variable age and prints the message
+    "You are eligible to vote." if age is greater or equal to 18 or prints "You are not eligible to vote." otherwise.
+    Assume int variable age is already declared and initialized.
+     */
+    public static void Question22() {
+        Scanner ageInput = new Scanner(System.in);
+        System.out.println("What is your age? ");
+
+        int age = ageInput.nextInt();
+        System.out.println(age >= 18 ? "You are eligible to vote." : "You are not eligible to vote.");
+    }
+
+    //Quiz 3.14 Question2
+    /*Goal: Learn how to use nested ternary operators to simplify conditional statements.
+
+    Assignment: Write a statement that evaluates the int variable age and prints the following, using the ternary operator:
+    "Child": 0-12 years
+    "Teen": 13-19 years
+    "Adult": 20-64 years
+    "Senior": 65 years and above
+    Assume int variable age is already declared and initialized.
+     */
+    public static void Question23() {
+        Scanner ageAnswer = new Scanner(System.in);
+        System.out.println("What is your age? ");
+
+        int age2 = ageAnswer.nextInt();
+
+        System.out.println(age2 < 13 ? "Child" : (age2 < 20 ? "Teen" : (age2 < 65 ? "Adult" : "Senior")));
+    }
+    //Quiz 3.15 Question3
+    /*Goal: Learn to write ternary if statements.
+
+    Assignment: In a new loyalty program for a café, customers are classified into tiers based on the number of coffee
+    cups they've purchased. Each tier rewards customers with different benefits.
+    Write an expression that evaluates the int variable coffeeCups, and prints one of the following, using the ternary operator:
+
+    "None"
+    "Bronze"
+    "Silver"
+    "Gold"
+    "Platinum"
+    The following values of coffeeCups define the categories:
+
+    None: if the number of coffees is less than 10.
+    Bronze tier is awarded between 10 cups and 19.
+    Silver tier is awarded between 20 cups and 29,
+    Gold tier is awarded between 30 and 39,
+    Platinum tier is awarded over 39 cups.
+     */
+    public static void Question24(){
+        Scanner coffeeCupInput = new Scanner(System.in);
+        System.out.println("How many coffee cups have you purchased? ");
+        int coffeeCups = coffeeCupInput.nextInt();
+        System.out.println(coffeeCups < 10 ? "None":
+                            (coffeeCups <20 ? "Bronze":
+                                    (coffeeCups <30 ? "Silver":
+                                            (coffeeCups <40 ? "Gold": "Platinum"))));
+    }
+}
