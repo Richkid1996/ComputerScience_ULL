@@ -32,7 +32,7 @@ Enter a year: 2000
 February 2000 has 29 days
 
  */
-public class ProgrammingProject3 {
+public class Chapter3ProgrammingProject3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a month in the year (e.g., 1 for Jan): ");

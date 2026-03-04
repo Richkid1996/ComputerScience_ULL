@@ -6,8 +6,10 @@ public class Chapter5 {
         Question2();//Quiz 5.7 Learn to write for loops Question 2
         Question3();//Quiz 5.7 Learn to write for loops Question 3
         Question4();//Quiz 5.7 Learn to write for loops Question 4
-        Question5();//Quiz 5.7 Learnto write for loops Question 5
-        //Question6();//Quiz 5.
+        Question5();//Quiz 5.7 Learn to write for loops Question 5
+        Question6();//Quiz 5.2 Learn to write while loops.
+        Question7();//Quiz 5.2 Learn to write while loops.
+        Question8();//Quiz 5.2 Learn to write while loops.
     }
     //Quiz 5.7 Question1
     /*Goal: Learn to write for loops.
@@ -23,7 +25,7 @@ public class Chapter5 {
      */
     public static void Question1() {
         int totalPoints = 0;
-        //The for loop runs from level 1 to level 20 in incraments of 1 because (level++) is the same as (level = level + 1)
+        //The for loop runs from level 1 to level 20 in increments of 1 because (level++) is the same as (level = level + 1)
         for (int level = 1; level <= 20; level++) {
             //Here is where we store the point totals and this represents the obstacle value and the number of obstacles
             //So were essential setting it to a power in the () times the level number
@@ -120,8 +122,66 @@ public class Chapter5 {
         }
         System.out.println(gcd);
     }
+    //Quiz 5.2 Question1
+    /*Goal: Learn to write while loops.
+    Assignment: In a game development project, you're tasked with calculating the initial health points (HP) of a character,
+    which is determined by the factorial of the level. At each level, the character multiplies their HP by that level up to level 10.
 
+    Use int variables level and hp, and use a while loop to compute hp at level 10.
 
+    Use no variables other than level and hp. Declare and initialize level and hp with appropriate values to ensure the
+    loop iterates correctly and calculates the factorial accurately. In the end, level should be 10, and hp should be 10 factorial.
 
+    Write a code snippet to accomplish this task.
+     */
+    public static void Question6(){
+        int level = 1;
+        int hp = 1;
+
+        while (level <= 10) {
+            hp *= level;
+            level ++;
+        }
+        System.out.println(hp);
+    }
+    //Quiz 5.2 Question 2
+    /*Goal: Learn to write while loops.
+
+    Assignment: Assuming a Scanner stdin has already been declared and instantiated
+    (i.e., Scanner stdin = new Scanner(System.in); is given), write a snippet of code that continuously prompts the user
+    for an integer input, until that input is a multiple of 3 and print this number. No other input validation is needed in this assignment.
+     */
+    public static void Question7() {
+        Scanner stdin = new Scanner(System.in);
+        System.out.println("Please give me a number: ");
+        int num = 1;
+        while (num % 3 != 0) {
+            num = stdin.nextInt();
+        }
+        System.out.println(num + " is a multiple of 3");
+    }
+    //Quiz 5.3 Question 3
+    /*Goal: Learn to write while loops.
+
+    Assignment: Assume a Scanner input has already been declared and instantiated (i.e., Scanner input = new Scanner(System.in); is given),
+    write a code snippet that reads 10 input values from the user, without a prompt.
+    Your program should only print back the input if it is a multiple of 5. No further input validation is required here.
+    Declare all necessary variables. Do not prompt the user with text. Print each number on a separate line.
+     */
+    public static void Question8(){
+        Scanner input = new Scanner(System.in);
+        int count = 0;
+        while (count  < 10) {
+            int numInput = input.nextInt();
+            if (numInput % 5 ==0) {
+                System.out.println(numInput);
+            }
+            count ++;
+        }
+    }
+    //Quiz 5.3 Question1
+    /*
+
+     */
 }
 
