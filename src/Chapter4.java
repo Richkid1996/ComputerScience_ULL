@@ -18,6 +18,7 @@ public class Chapter4 {
         Question10();//Quiz 4.4.4 Learn to compare strings.
         Question11();//Quiz 4.4.4 Learn to compare strings.
         Question12();//Quiz 4.4.4 Learn to compare strings.
+        Question13();//Quiz 4.4.8 Learn to get substrings.
     }
     //Quiz 4.3 Question1
     /*Goal: Familiarize with the operations of characters.
@@ -219,8 +220,8 @@ public class Chapter4 {
     Assignment: TechGiant Electronics is issuing a safety notice for certain models of its portable chargers,
     specifically the ‘PowerPack’ model from 2015 to 2018 and the ‘EnergyBar’ model from 2016 to 2019, due to potential overheating issues.
 
-    Write a program that reads the model name and the year of production and displays appropriate messages as shown in t
-    he sample run. Model names are not case-sensitive. Your class name should be Answer.
+    Write a program that reads the model name and the year of production and displays appropriate messages as shown in
+    the sample run. Model names are not case-sensitive. Your class name should be Answer.
 
     Sample Run 1
 
@@ -244,6 +245,40 @@ public class Chapter4 {
     2020 energybar has no issues
      */
     public static void Question12(){
+        Scanner productInput = new Scanner(System.in);
+        System.out.println("What is the models name: ");
+        String model = productInput.nextLine();
 
+        System.out.println("What is the production year: ");
+        int year = productInput.nextInt();
+
+        boolean hasIssues = false;
+
+        if (model.equalsIgnoreCase("PowerPack") && year >= 2015 &&  year <= 2018) {
+            hasIssues = true;
+        } else if (model.equalsIgnoreCase("EnergyBar") && year >=2017 &&  year <= 2019) {
+            hasIssues = true;
+        }
+        if (hasIssues) {
+            System.out.println(year + " " + model + " has potential overheating issues");
+        }else {
+            System.out.println(year + " " + model + " has no issues");
+        }
     }
+    //Quiz 4.4.8 Question1
+    /*Goal: Learn to get substrings.
+    Assignment: In a system designed for a digital library archive, each document is tagged with a unique identifier.
+    The identifier is split into three parts, each separated by a : character. The middle code represents the type of the document.
+    The three parts are always three characters long each. The resulting document id is always 11 characters long.
+
+    Given a String variable documentId, declare the String variable typeId, and initialize it to the middle part of the document id.
+
+    For example, if documentId were ABC:123:XYZ, then typeId would be 123.
+     */
+    public static void Question13() {
+        String documentId = "ABC:123:XYZ";
+        String typeID = documentId.substring(4,7);
+        System.out.println(typeID);
+    }
+
 }
