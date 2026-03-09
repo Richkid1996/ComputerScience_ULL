@@ -8,9 +8,13 @@ public class Chapter8 {
         Question4();// Quiz 8.2.1 Learn to declare and initialize 2D arrays.
         Question5();// Quiz 8.2.2 Learn to get the length of matrix rows.
         Question6();// Quiz 8.2.2 Learn to get matrix length.
-        Question7();// Quix 8.2.2 Learn to get matrix length.
+        Question7();// Quiz 8.2.2 Learn to get matrix length.
         Question8();// Quiz 8.2.2 Learn to get the number of items in a matrix.
         Question9();// Quiz 8.2.3 Learn to access matrix elements.
+        Question10();// Quiz 8.3 Learn to iterate over matrices.
+        Question11();//Quiz 8.3 Learn to iterate over matrices.
+        Question13();//Qui 8.3 Learn to iterate over matrices.
+        Question14();//Quiz 8.8 Learn to declare multi-dimensional arrays.
 
     }
     //Quiz 8.2.1 Question 1
@@ -171,5 +175,96 @@ public class Chapter8 {
         }
 
         System.out.println(totalSum);
+    }
+    //Quiz 8.3 Question 2
+    /*Goal: Learn to iterate over matrices.
+
+    Assignment: Given a two-dimensional array sessionAttendees holding int values, write a code snippet that declares a
+    boolean variable named uniformSessions and checks whether sessionAttendees is a uniform array or a ragged array.
+    If it is a ragged array set uniformSessions to false, otherwise set it to true. A two-dimensional array is uniformed if the rows have the same length.
+     */
+    public static void Question11() {
+        int [][] sessionAttendees = {
+                {2,3,4,4,},
+                {2,3,4,},
+                {4,5,9,8,},
+        };
+        boolean uniformSessions = true;
+
+        for (int i = 1; i < sessionAttendees.length; i++){
+            if (sessionAttendees[i].length != sessionAttendees[0].length) {
+                uniformSessions = false;
+                break;
+            }
+        }
+        System.out.println(uniformSessions);
+    }
+
+    //Quiz 8.3 Question 4
+    /*Goal: Learn to iterate over matrices.
+
+    Assignment: Given a 2D array arr holding int values already declared and initialized, write a code snippet to find
+    the biggest element in arr. You will store it in the variable maxElement, as well as its position in maxRow and maxCol.
+    You need to declare these three variables in your code.
+     */
+    public static void Question12() {
+        int maxElement = Integer.MIN_VALUE;
+        int maxRow = 0;
+        int maxCol = 0;
+
+        int [][] arr = {
+                {6,5,6,8,8,},
+                {8,9,10,45,55,},
+                {10,12,14,34,40,},
+        };
+
+        for (int i = 0; i < arr.length; i ++) {
+            for (int j = 0; j < arr.length; j ++){
+                if (arr[i][j] >= maxElement){
+                    maxElement = arr[i][j];
+                    maxRow = i;
+                    maxCol = j;
+                }
+            }
+        }
+    }
+
+    //Quiz 8.3 Question 5
+    /*Goal: Learn to iterate over matrices.
+
+    Assignment: Assume a matrix arr, holding int values. Write a code snippet that computes the transpose of arr and stores it in the variable transposedArr.
+    Note: Transposing a matrix is the process by which each element swaps its column and row subscripts. For example, after the matrix
+    is transposed, it becomes
+     */
+    public static void Question13() {
+        int [][] arr = {
+                {1,2,3,},
+                {4,5,6,},
+                {7,8,9,},
+        };
+        int rows = arr.length;;
+        int cols = arr[0].length;
+
+        int [][] transposedArr = new int[rows][cols];
+        for (int i = 0;i  < rows; i ++){
+            for(int j = 0; j < cols; j ++){
+                transposedArr[j][i] = arr[i][j];
+            }
+        }
+        System.out.println(transposedArr);
+    }
+    // Quiz 8.8 Question 1
+    /*Goal: Learn to declare multi-dimensional arrays.
+
+    Assignment: To assist a national park in monitoring wildlife movements, a system is needed to track the number of specific
+    animal sightings per hour, per day, per month, and per year across various regions within the park.
+    Declare a multidimensional array of int, wildlifeSightings, that can store the number of sightings of a particular
+    species observed during a specific hour, on a specific day, in a specific month, and in a specific year.
+     */
+
+    public static void Question14(){
+    int [][][][] wildlifeSightings = new int  [10][12][31][24];
+
+    System.out.println(wildlifeSightings);
     }
 }
