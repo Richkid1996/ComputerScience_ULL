@@ -10,6 +10,7 @@ public class Chapter8 {
         Question6();// Quiz 8.2.2 Learn to get matrix length.
         Question7();// Quix 8.2.2 Learn to get matrix length.
         Question8();// Quiz 8.2.2 Learn to get the number of items in a matrix.
+        Question9();// Quiz 8.2.3 Learn to access matrix elements.
 
     }
     //Quiz 8.2.1 Question 1
@@ -127,5 +128,48 @@ public class Chapter8 {
     public static void Question8() {
         int [][] gameMap = new int [5][6];
     System.out.println(gameMap.length);
+    }
+    //Quiz 8.2.3 Question 3
+    /*Goal: Learn to access matrix elements.
+
+    Assignment: In a climate monitoring system, temperatures are recorded over three days at three different times of the day,
+    creating a grid of temperature readings.
+    A 2-dimensional 3x3 array of ints represents the temperature readings assigned to temperatureGrid. Declare a boolean
+    variable result and write an expression whose value is true if the temperatures of the first day (first row) are all equal,
+    indicating consistent weather conditions. Assign the value of the expression to result.
+     */
+    public static void Question9(){
+        int [][] temperatureGrid = {
+                {3,3,3,},
+                {4,4,4,},
+                {5,5,5,},
+        };
+        boolean result = (temperatureGrid[0][0] == temperatureGrid[0][1]) && (temperatureGrid[0][0] == temperatureGrid[0][2] );
+        System.out.println(result);
+    }
+    //Quiz 8.3 Question 1
+    /*Goal: Learn to iterate over matrices.
+
+    Assignment: Given a square matrix arr, holding int values, write a code snippet that calculates the sums of the elements
+    on each diagonal, and adds them together in a variable totalSum.
+     */
+    public static void Question10() {
+        int [][] arr = {
+                {2,3,4,5,6,},
+                {1,4,5,7,3,},
+                {3,4,5,6,7,},
+        };
+
+        int totalSum = 0;
+
+        for (int i = 0; i < arr.length; i ++){
+            totalSum += arr[i][i];
+        }
+
+        for (int i = 0; i < arr.length; i ++){
+            totalSum += arr[i][arr.length - 1 - i];
+        }
+
+        System.out.println(totalSum);
     }
 }
