@@ -4,6 +4,12 @@ public class Chapter8 {
 
         Question1();// Quiz 8.2.1 Learn to declare 2D arrays.
         Question2();// Quiz 8.2.1 Learn to declare 2D arrays.
+        Question3();// Quiz 8.2.1 Learn to declare and initialize 2D arrays.
+        Question4();// Quiz 8.2.1 Learn to declare and initialize 2D arrays.
+        Question5();// Quiz 8.2.2 Learn to get the length of matrix rows.
+        Question6();// Quiz 8.2.2 Learn to get matrix length.
+        Question7();// Quix 8.2.2 Learn to get matrix length.
+        Question8();// Quiz 8.2.2 Learn to get the number of items in a matrix.
 
     }
     //Quiz 8.2.1 Question 1
@@ -17,10 +23,109 @@ public class Chapter8 {
 
     }
     //Quiz 8.2.1 Question 2
-    /*
+    /*Goal: Learn to declare 2D arrays.
 
+    Assignment: In a classroom app for geography quizzes, you need to store questions and answers in a structured format for easy access during the quiz.
+    Declare a two-dimensional array of String named quizQA to store questions and their corresponding answers for a geography quiz.
      */
     public static void Question2() {
+        String [][] quizQA = new String[2][10] ;
+    }
+    //Quiz 8.2.1 Question 3
+    /*Goal: Learn to declare and initialize 2D arrays.
 
+    Assignment: Imagine you're tasked with storing data about beehives, specifically the number of bees in each hive and
+    the corresponding honey production. You'll need to create a 2D array to organize and manage this data efficiently.
+    In a single statement, declare and create a two-dimensional array of int, named hiveData, with 2 rows, each with 3 elements, and initialize it so that:
+    the first hive produces 15kg of honey and contains 3000 bees
+    the second hive produces 25kgs of honey and contains 5000 bees
+    the third hive produces 40kgs of honey and contains 8000 bees
+    The first row of your array will hold the honey weight values in kilograms, and the second row will hold the number of bees per hive.
+    Do not use new int[]{...} for the inner initialization.
+     */
+    public static void Question3() {
+        int [][] hiveData = {
+                {15, 25, 40,},
+                {3000, 5000, 8000},
+        };
+    }
+    //Quiz 8.2.1 Question 4
+    /*Goal: Learn to declare and initialize 2D arrays.
+
+    Assignment: A teacher creates a digital seating chart for students in a classroom setting. Each seat is represented
+    by a character: 'E' for empty and 'S' for student.
+    In a single statement, declare and create a two-dimensional array of char, named seatingChart, with 4 rows, each with
+    4 elements, and initialize it to all 'E' characters to represent an initially empty classroom.
+    Do not use new String[]{...} for the inner initialization.
+     */
+    public static void Question4(){
+        char [][] seatingChart = {
+                {'E','E','E','E',},
+                {'E','E','E','E',},
+                {'E','E','E','E',},
+        };
+    }
+    //Quiz 8.2.2 Question 1
+    /*Goal: Learn to get the length of matrix rows.
+
+    Assignment: In a digital art gallery, artworks are displayed on screens arranged in rows, with each row potentially
+    holding a different number of artworks due to varying screen sizes.
+    A two-dimensional array of String represents the artworks displayed on each row of screens in the gallery and is
+    assigned to galleryDisplays. Write an expression whose value is the number of artworks on the last row of screens.
+    (Assume the gallery is not empty, and each row can display a different number of artworks.)
+
+     */
+    public static void Question5(){
+        String [][] galleryDisplays = {
+                {"3", "5", "6", "8",}
+        };
+
+       int lastRow = galleryDisplays[galleryDisplays.length -1].length;
+       System.out.println(lastRow);
+
+    }
+    //Quiz 8.2.2 Question 2
+    /*Goal: Learn to get the length of matrix rows.
+
+    Assignment: In a classroom seating arrangement app, seats are organized in rows and columns for different classroom layouts.
+
+    A two-dimensional array of boolean represents the number of seats available in each row of a classroom and is assigned
+    to classroomSeats. Each element is true if that seat is currently occupied. Write an expression whose value is the number
+    of seats in the first row. (Assume the classroom layout is not empty, and each row could have a different number of seats.)
+     */
+    public static void Question6(){
+        boolean [][] classroomSeats = {
+                {true, true, true, true,},
+                {false, true, false, true,},
+                {true, true, false, false},
+                {true, false, true, false,},
+        };
+        System.out.println(classroomSeats[0].length);
+    }
+    //Quiz 8.2.2 Question 3
+    /*Goal: Learn to get matrix length.
+
+    Assignment: In a digital ledger for a small business, transactions are recorded daily over four weeks, with each week
+    represented as a row in a two-dimensional array named monthlyTransactions.
+    Write an expression whose value is the total number of transaction records that are stored in the entire array.
+     */
+    public static void Question7(){
+            int[][] monthlyTransactions = new int[4][7];
+
+            int total = monthlyTransactions.length * monthlyTransactions[0].length;
+            System.out.println("Total transactions: " + total); // prints 28
+        }
+    //Quiz 8.2.2 Question 4
+    /*Goal: Learn to get the number of items in a matrix.
+
+    Assignment: In a strategy game, the game map is divided into territories, each represented as rows in a two-dimensional
+    array, where each row contains details about the territory's resources.
+
+    A two-dimensional array of int represents the game map's territories and their resources, assigned to gameMap.
+    Write an expression whose value is the number of territories (rows) in this game map.
+     */
+    public static void Question8() {
+        int [][] gameMap = new int [5][6];
+    System.out.println(gameMap.length);
     }
 }
