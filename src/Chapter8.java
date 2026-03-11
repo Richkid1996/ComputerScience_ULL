@@ -15,6 +15,7 @@ public class Chapter8 {
         Question11();//Quiz 8.3 Learn to iterate over matrices.
         Question13();//Qui 8.3 Learn to iterate over matrices.
         Question14();//Quiz 8.8 Learn to declare multi-dimensional arrays.
+        Question15();//Quiz 8.8 Learn to declare and initialize multi-dimensional arrays.
 
     }
     //Quiz 8.2.1 Question 1
@@ -266,5 +267,24 @@ public class Chapter8 {
     int [][][][] wildlifeSightings = new int  [10][12][31][24];
 
     System.out.println(wildlifeSightings);
+    }
+    //Quiz 8.8 Question 2
+    /*Goal: Learn to declare and initialize multi-dimensional arrays.
+
+    Assignment: In a system designed for monitoring environmental conditions across different biomes, data is collected on
+    various factors such as temperature, humidity, and soil moisture. This data is organized by biome type, month, and week.
+    Declare, create, and initialize a three-dimensional array of ints, named biomeData, to store this environmental data.
+    The array should have 3 main elements (representing different biomes), each containing 2 elements for different months,
+    where each month contains 4 weeks of data. Initialize the data as follows: for the first biome, all values are 15;
+    for the second biome, all values are 20; and for the third biome, the first month has all values as 25 and the second
+    month has weekly values of 28, 29, 30, and 31.
+     */
+    public static void Question15(){
+    int [][][] biomeData = {
+            {{15,15,15,15}, {20,20,20,20}},
+            {{20,20,20,20}, {20,20,20,20}},
+            {{25,25,25,25}, {28,29,30,31}},
+    };
+    System.out.println(biomeData);
     }
 }
