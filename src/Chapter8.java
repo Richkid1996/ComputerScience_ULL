@@ -25,7 +25,7 @@ public class Chapter8 {
     Declare a two-dimensional array of int named petSchedule to store the number of feedings and exercise sessions for each pet across seven days of the week.
      */
     public static void Question1() {
-        int [][] petSchedule = new [2][7];
+        int [][] petSchedule = new  int[2][7];
 
     }
     //Quiz 8.2.1 Question 2
